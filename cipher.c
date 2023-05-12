@@ -108,8 +108,9 @@ static const struct sshcipher ciphers[] = {
 	{ "chacha20-poly1305@openssh.com",
 				8, 64, 0, 16, CFLAG_CHACHAPOLY, NULL },
 	{ "none",		8, 0, 0, 0, CFLAG_NONE, NULL },
+    { "sm4-ctr",		16, 24, 0, 0, 0, EVP_sm4_ctr },
 
-	{ NULL,			0, 0, 0, 0, 0, NULL }
+    { NULL,			0, 0, 0, 0, 0, NULL }
 };
 
 /*--*/

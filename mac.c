@@ -65,8 +65,9 @@ static const struct macalg macs[] = {
 	{ "hmac-md5-96",			SSH_DIGEST, SSH_DIGEST_MD5, 96, 0, 0, 0 },
 	{ "umac-64@openssh.com",		SSH_UMAC, 0, 0, 128, 64, 0 },
 	{ "umac-128@openssh.com",		SSH_UMAC128, 0, 0, 128, 128, 0 },
+    { "hmac-sm3-128@openssh.com",      SSH_DIGEST, SSH_DIGEST_SM3, 0, 0, 0, 0},
 
-	/* Encrypt-then-MAC variants */
+        /* Encrypt-then-MAC variants */
 	{ "hmac-sha1-etm@openssh.com",		SSH_DIGEST, SSH_DIGEST_SHA1, 0, 0, 0, 1 },
 	{ "hmac-sha1-96-etm@openssh.com",	SSH_DIGEST, SSH_DIGEST_SHA1, 96, 0, 0, 1 },
 	{ "hmac-sha2-256-etm@openssh.com",	SSH_DIGEST, SSH_DIGEST_SHA256, 0, 0, 0, 1 },
@@ -75,8 +76,9 @@ static const struct macalg macs[] = {
 	{ "hmac-md5-96-etm@openssh.com",	SSH_DIGEST, SSH_DIGEST_MD5, 96, 0, 0, 1 },
 	{ "umac-64-etm@openssh.com",		SSH_UMAC, 0, 0, 128, 64, 1 },
 	{ "umac-128-etm@openssh.com",		SSH_UMAC128, 0, 0, 128, 128, 1 },
+    { "hmac-sm3-128etm@openssh.com",      SSH_DIGEST, SSH_DIGEST_SM3, 0, 0, 0, 1},
 
-	{ NULL,					0, 0, 0, 0, 0, 0 }
+    { NULL,					0, 0, 0, 0, 0, 0 }
 };
 
 /* Returns a list of supported MACs separated by the specified char. */
